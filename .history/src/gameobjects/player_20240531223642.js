@@ -14,8 +14,7 @@ class Player extends Phaser.GameObjects.Rectangle {
 		this.jumping = false; // set the jumping property initially to false
 		this.invincible = false; // set the invincible property initially to false so the player can be hit
 		this.health = 10; // set the health property to 10
-		this.body.mass = 10; // set the mass of the player object to 10
+		this.body.mass = 10; // set the mass of the player object to 1
 		this.body.setDragY = 10; // set the drag of the player along the y-axis to 10 to slow player down
 	}
 }
-export default Player;

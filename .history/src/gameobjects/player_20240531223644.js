@@ -18,4 +18,3 @@ class Player extends Phaser.GameObjects.Rectangle {
 		this.body.setDragY = 10; // set the drag of the player along the y-axis to 10 to slow player down
 	}
 }
-export default Player;
