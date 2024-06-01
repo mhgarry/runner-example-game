@@ -171,12 +171,5 @@ export default class Game extends Phaser.Scene {
 	finishScene() {
 		this.theme.stop(); // stop the theme music
 		this.playAudio('dead'); // play the dead sound
-		this.registry.set('score', '', +this.score); // set the score in the registry to the score
-		this.scene.start('gameover'); // start the game over scene
-	}
-	/* Create a method to update the score */
-	updateScore(points = 1) {
-		this.score += points; // add the points to the score
-		this.scoreText.setText(this.score); // set the text of the scoreText to the score
 	}
 }
