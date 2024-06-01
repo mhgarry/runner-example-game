@@ -45,10 +45,9 @@ export default class GameOver extends Phaser.Scene {
 			targets: line, // set the target of the tween to the line object
 			alpha: 1, // set the alpha of the line object to 1 to make it visible
 			duration: 2000, // set the duration of the tween to 2000 milliseconds
-		});
+        });
+        startGame() {
+            this.scene.start('game') // start the game scene when the startGame method is called
+        } // set the duration of the tween to 2000 milliseconds
 	}
-
-	startGame() {
-		this.scene.start('game'); // start the game scene when the startGame method is called
-	} // set the duration of the tween to 2000 milliseconds
 }

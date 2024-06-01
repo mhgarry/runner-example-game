@@ -38,17 +38,8 @@ export default class GameOver extends Phaser.Scene {
 		let line = this.introLayer.add(
 			this.add
 				.bitmapText(this.center_width, y, 'pixelFont', text, 25) // create a bitmap text object to display the text on the screen
-				.setOrigin(0.5) // set the origin of the text to the center of the text
-				.setAlpha(0), // set the alpha of the text to 0 to make it invisible
+                .setOrigin(0.5), // set the origin of the text to the center of the text
+                .setAlpha(0); // set the alpha of the text to 0 to make it invisible
 		);
-		this.tweens.add({
-			targets: line, // set the target of the tween to the line object
-			alpha: 1, // set the alpha of the line object to 1 to make it visible
-			duration: 2000, // set the duration of the tween to 2000 milliseconds
-		});
 	}
-
-	startGame() {
-		this.scene.start('game'); // start the game scene when the startGame method is called
-	} // set the duration of the tween to 2000 milliseconds
 }

@@ -47,8 +47,4 @@ export default class GameOver extends Phaser.Scene {
 			duration: 2000, // set the duration of the tween to 2000 milliseconds
 		});
 	}
-
-	startGame() {
-		this.scene.start('game'); // start the game scene when the startGame method is called
-	} // set the duration of the tween to 2000 milliseconds
 }
