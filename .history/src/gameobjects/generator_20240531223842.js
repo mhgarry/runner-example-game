@@ -1,0 +1,3 @@
+/*
+Logic to generate obstacles and coins in the game randomly
+ */

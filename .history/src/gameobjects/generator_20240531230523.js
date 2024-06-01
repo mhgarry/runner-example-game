@@ -134,13 +134,11 @@ class Coin extends Phaser.GameObjects.Sprite {
 
 		// creates the coin animation
 		const coinAnimation = this.scene.anims.create({
-			key: 'coin', // set the key of the coin animation to 'coin'
+			key: 'coin',
 			frames: this.scene.anims.generateFrameNumbers('coin', {
 				start: 0,
 				end: 7,
 			}), // set the frames of the coin animation to be generated from 0 to 7
-			frameRate: 8, // set the frame rate of the coin animation to 8
 		});
-		this.play({ key: 'coin', repeat: -1 }); // play the coin animation and repeat it indefinitely until the coin is destroyed
 	}
 }

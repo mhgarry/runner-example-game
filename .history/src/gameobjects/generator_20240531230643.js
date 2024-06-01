@@ -141,6 +141,5 @@ class Coin extends Phaser.GameObjects.Sprite {
 			}), // set the frames of the coin animation to be generated from 0 to 7
 			frameRate: 8, // set the frame rate of the coin animation to 8
 		});
-		this.play({ key: 'coin', repeat: -1 }); // play the coin animation and repeat it indefinitely until the coin is destroyed
 	}
 }

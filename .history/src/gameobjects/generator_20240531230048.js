@@ -97,50 +97,9 @@ class Obstacle extends Phaser.GameObjects.Rectangle {
 		scene.physics.add.existing(this); // add physics to the obstacle object
 		this.body.setAllowGravity(false); // set the obstacle object to not allow gravity
 		this.alpha = 1 / Phaser.Math.Between(1, 3); // set the starting value of the obstacle object to a random value between 1 and 3
-
-		this.init(); // call the init function to initialize the obstacle object and set the properties
-	}
-
-	init() {
-		this.scene.tweens.add({
-			targets: this,
-			x: { from: 820, to: -100 },
-			duration: 2000,
-			onComplete: () => this.destroy(),
-		});
 	}
 }
 
 /*
 this is a game object that represents a coin in the game. It's an animated sprite that is part of the coiins group that we created in the game scene. It moves the same as the previous cloud and obstacle objects.
 */
-class Coin extends Phaser.GameObjects.Sprite {
-	constructor(scene, x, y) {
-		super(scene, x, y, 'coin');
-		scene.add.existing(this);
-		scene.physics.add.existing(this);
-		this.body.setAllowGravity(false);
-		const alpha = 1 / Phaser.Math.Between(1, 3);
-
-		this.init();
-	}
-	init() {
-		this.scene.tweens.add({
-			targets: this,
-			x: { from: 820, to: -100 },
-			duration: 2000,
-			onComplete: () => this.destroy(),
-		});
-
-		// creates the coin animation
-		const coinAnimation = this.scene.anims.create({
-			key: 'coin', // set the key of the coin animation to 'coin'
-			frames: this.scene.anims.generateFrameNumbers('coin', {
-				start: 0,
-				end: 7,
-			}), // set the frames of the coin animation to be generated from 0 to 7
-			frameRate: 8, // set the frame rate of the coin animation to 8
-		});
-		this.play({ key: 'coin', repeat: -1 }); // play the coin animation and repeat it indefinitely until the coin is destroyed
-	}
-}
