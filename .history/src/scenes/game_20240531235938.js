@@ -1,6 +1,6 @@
-/*
-The game scene that that loads the game assets, creates the gameobjects, and creates the game loop.
-*/
+// /*
+// The game scene that that loads the game assets, creates the gameobjects, and creates the game loop.
+// */
 
 // import Player from '../gameobjects/player';
 // import Generator from '../gameobjects/generator';
@@ -8,7 +8,7 @@ The game scene that that loads the game assets, creates the gameobjects, and cre
 // // Create a class called game that extends Phaser.Scene and contains the game logic
 // export default class Game extends Phaser.Scene {
 // 	constructor() {
-// 		super({ key: 'game' }); // Create a constructor that takes in a key parameter and passes it to the super class
+// 		super({ key: 'game ' }); // Create a constructor that takes in a key parameter and passes it to the super class
 // 		this.player = null; // Set the player property to null initially
 // 		this.score = 0; // Set the score property to 0 initially.  Will be used to keep track of the player's score to display on the screen
 // 		this.scoreText = null; // Set the scoreText property to null initially. Will be used to display the player's score as text
@@ -26,8 +26,7 @@ The game scene that that loads the game assets, creates the gameobjects, and cre
 // 		this.load.audio('coin', 'assets/sounds/coin.mp3'); // loads the coin sound
 // 		this.load.audio('jump', 'assets/sounds/jump.mp3'); // loads the jump sound
 // 		this.load.audio('dead', 'assets/sounds/dead.mp3'); // loads the death sound
-// 		this.load.audio('theme', 'assets/sounds/theme.mp3'); // loads the theme music
-// 		this.load.spritesheet('coin', './assets/images/coin.png', {
+// 		this.load.spritesheet('coin', 'assets/coin.png', {
 // 			frameWidth: 32,
 // 			frameHeight: 32,
 // 		}); // loads the coin spritesheet
@@ -103,18 +102,16 @@ The game scene that that loads the game assets, creates the gameobjects, and cre
 // 		/* use update method to update the game state */
 // 		this.updateScoreEvent = this.time.addEvent({
 // 			delay: 100,
-// 			callback: () => this.updateScore(),
+// 			callback: () => this.updateScoreEvent(),
 // 			callbackScope: this,
 // 			loop: true,
 // 		}); // create an updateScoreEvent to update the score every 100 milliseconds and pass in the scene to the callback function
 // 	}
-
 // 	/* Create a method to be called when a player hits an obstacle */
 // 	hitObstacle(player, obstacle) {
 // 		this.updateScoreEvent.destroy(); // destroy the updateScoreEvent
-// 		this.finishScene(); // call the finishScore function
+// 		this.finishScore(); // call the finishScore function
 // 	}
-
 // 	/* Create a method to be called when a player hits a coin */
 // 	hitCoin(player, coin) {
 // 		this.playAudio('coin'); // play the coin sound
@@ -160,7 +157,7 @@ The game scene that that loads the game assets, creates the gameobjects, and cre
 // 	/* Create a method to make the player jump */
 // 	jump() {
 // 		if (!this.player.body.blocked.down) return; // return if the player is not blocked down
-// 		this.player.body.setVelocityY(-300); // set the velocity of the player to -300
+// 		this.player.body.setVelocity(-300); // set the velocity of the player to -300
 
 // 		this.playAudio('jump'); // play the jump sound
 // 		this.jumpTween = this.tweens.add({

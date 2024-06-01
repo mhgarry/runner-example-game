@@ -13,10 +13,10 @@ importers:
         version: 3.80.1
     devDependencies:
       terser:
-        specifier: ^5.31.0
+        specifier: ^5.28.0
         version: 5.31.0
       vite:
-        specifier: ^5.2.0
+        specifier: ^5.1.0
         version: 5.2.12(terser@5.31.0)
 
 packages:
